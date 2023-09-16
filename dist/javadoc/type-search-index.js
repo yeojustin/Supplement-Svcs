@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"a1q2","l":"AssociateCustomer"},{"p":"a1q2","l":"Client"},{"p":"a1q2","l":"Customer"},{"p":"a1q2","l":"Helper"},{"p":"a1q2","l":"Magazine"},{"p":"a1q2","l":"Main"},{"p":"a1q2","l":"PayingCustomer"},{"p":"a1q2","l":"Supplement"},{"p":"a1q2","l":"SupplementDatabase"}];updateSearchResults();
