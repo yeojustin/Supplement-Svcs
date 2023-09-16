@@ -1,7 +1,5 @@
 
-# Magazine Subscription Management Program (Non-GUI based)
-
-*Author: Justin Yeo Jun Neng*
+*Author: Yeo Justin*
 
 *Version 4.0: Aug 1, 2023*
 
