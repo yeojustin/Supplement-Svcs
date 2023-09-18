@@ -1,7 +1,10 @@
-*Author: Yeo Justin*
+*Author: Yeo Justin* 
 *Version: 3.1*
 *Date: 29/07/2023*
 *File Names: The main packages include controller, model, view, and templates with various class files inside.*
+
+![JavaFX Logo](https://i.imgur.com/hTwRNlp.png](https://upload.wikimedia.org/wikipedia/commons/3/30/JavaFX_text_logo.png)
+
 
 ## Statement of Purpose
 🚀 The program provides functionalities for adding, deleting, and displaying details of customers, magazines, and supplements - you may see this as an extension to the non gui app version under supplement-svcs repo.
