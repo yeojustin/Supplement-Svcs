@@ -3,7 +3,7 @@ Version: 3.1
 Date: 29/07/2023
 File Names: The main packages include controller, model, view, and templates with various class files inside.
 
-![JavaFX Logo](https://upload.wikimedia.org/wikipedia/commons/3/30/JavaFX_text_logo.png)
+![JavaFX Logo](https://upload.wikimedia.org/wikipedia/commons/3/30/JavaFX_text_logo.png](https://cdn.iconscout.com/icon/free/png-256/free-java-59-1174952.png?f=webp)
 
 
 
