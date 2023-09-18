@@ -10,10 +10,6 @@
 
 This document provides an overview of the planning and development of user-defined classes for an online weekly personalized magazine service. The program aims to manage this service by offering customers a main magazine section along with additional supplements of their choice.
 
-The document outlines various classes that have been created for this purpose, including the `Customer`, `PayingCustomer`, `AssociateCustomer`, `Magazine`, `Payment`, `Supplement`, `SupplementDatabase`, and `Helper` classes.
-
-Referenced files: `Customer.java`, `PayingCustomer.java`, `AssociateCustomer.java`, `Magazine.java`, `Payment.java`, `Supplement.java`, `SupplementDatabase.java`, `Helper.java`, and `Main.java`.
-
 ### Requirements and Specification
 
 The program facilitates the management of a magazine subscription system. Users can create a new magazine by specifying the main part cost and selecting supplements. Paying customers can be added with their name, email, and payment details, and associate customers can be associated with a paying customer. The program allows for the creation of multiple customers and the addition of associate customers. Magazine details, including the main part cost and selected supplements, can be initialized or created and displayed. Customers can be added to the magazine upon confirmation. On the flip side, the program also allows removal of customers from the created magazine. The program is also capable of generating weekly emails for each customer, and the contents of the email provide a list of interested supplements for customers, but omit the payment or invoicing. The invoice email is only generated through another method where it is only generated for Paying Customers. As such, the program streamlines the process of managing magazine subscriptions and customer interactions.
