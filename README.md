@@ -1,5 +1,3 @@
-# Magazine Subscription Management Program Documentation
-
 *Author: Yeo Justin*
 
 *Version: June 18, 2023*
