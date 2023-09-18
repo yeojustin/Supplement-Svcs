@@ -1,68 +1,100 @@
-
 *Author: Yeo Justin*
+*Version: 3.1*
+*Date: 29/07/2023*
+*File Names: The main packages include controller, model, view, and templates with various class files inside.*
 
-*Version 4.0: Aug 1, 2023*
+## Statement of Purpose
+🚀 The program provides functionalities for adding, deleting, and displaying details of customers, magazines, and supplements - you may see this as an extension to the non gui app version under supplement-svcs repo.
 
----
+## Requirements
 
-![Java Logo](https://i.imgur.com/hTwRNlp.png)
+The program is designed to manage customers, magazines, and supplements. It includes options to:
 
-## Overview
+- Add a new magazine or customer
+- Delete a customer
+- Display emails for all customers
+- Display monthly emails for paying customers
+- Manage supplements and their associations with magazines
+- Handle different types of customers like paying and associate customers
 
-This document provides an overview of the planning and development of user-defined classes for an online weekly personalized magazine service. The program aims to manage this service by offering customers a main magazine section along with additional supplements of their choice.
+## Requirements and Specification
 
-The document outlines various classes that have been created for this purpose, including the `Customer`, `PayingCustomer`, `AssociateCustomer`, `Magazine`, `Payment`, `Supplement`, `SupplementDatabase`, and `Helper` classes.
+### Overview
+The program serves as a management system for handling customers, magazines, supplements, and related interactions. It provides a set of functionalities for adding, deleting, displaying details of customers, magazines, and supplements, and managing interactions between these components.
 
-Referenced files: `Customer.java`, `PayingCustomer.java`, `AssociateCustomer.java`, `Magazine.java`, `Payment.java`, `Supplement.java`, `SupplementDatabase.java`, `Helper.java`, and `Main.java`.
+### Main Functionalities
 
-### Requirements and Specification
+#### Magazine Management
+- **Adding a New Magazine:** Allows the addition of new magazines with details like name, catalog, description, weekly cost, and associated supplements.
+- **Supplement Management:** Supplements can be attached to magazines, with details like name and weekly cost.
 
-The program facilitates the management of a magazine subscription system. Users can create a new magazine by specifying the main part cost and selecting supplements. Paying customers can be added with their name, email, and payment details, and associate customers can be associated with a paying customer. The program allows for the creation of multiple customers and the addition of associate customers. Magazine details, including the main part cost and selected supplements, can be initialized or created and displayed. Customers can be added to the magazine upon confirmation. On the flip side, the program also allows removal of customers from the created magazine. The program is also capable of generating weekly emails for each customer, and the contents of the email provide a list of interested supplements for customers, but omit the payment or invoicing. The invoice email is only generated through another method where it is only generated for Paying Customers. As such, the program streamlines the process of managing magazine subscriptions and customer interactions.
+#### Customer Management
+- **Adding Multiple Customers:** Allows the addition of multiple customers with details like name, email, ID, gender, age, and associated supplements. Customers can be either paying customers or associate customers.
+- **Deleting a Customer:** Enables the deletion of a customer by providing a specific customer ID.
 
-#### Assumptions
+#### Email and EditControl Management
+- **Displaying Emails:** Offers functionalities to display emails for all customers for a given period (e.g., 4 weeks) or display monthly emails for paying customers.
+- **Handling Replies:** Likely includes handling replies or responses related to user interactions, although the exact requirements need to be further explored.
 
-The program assumes valid user input and provides outputs confirming customer creation and successful customer removal from the magazine. The program assumes that there are no external factors or dependencies that may affect the program's functionality, such as network connectivity issues or external services required for payment processing. It assumes that the program can run independently without relying on external resources beyond what is provided within the code itself. Finally, the program also assumes that the main part cost of the magazine is user-defined and final, thus ignoring each individual supplement weekly cost.
+### Assumptions and Conditions
 
----
+#### Input Assumptions
+- **Valid Customer Details:** When adding customers, valid details like name, email, ID, gender, and age must be provided.
+- **Valid Supplement Details:** The supplements chosen by the customer must be valid and exist in the system.
+
+#### Output Expectations
+- **Informative Messages:** The program provides appropriate messages and prompts to guide the user through various functionalities.
+- **Displaying Details:** The program displays details of magazines, customers, and interactions as required.
+
+### Integration with Other Components
+
+The MagazineClient class serves as the main controller, integrating and interacting with other classes (e.g., Magazine, Supplement, Customer, PayingCustomer, EditControl, AssociateCustomer) to achieve the desired functionalities.
 
 ## User Guide
 
 | **Step** | **Action** | **Description** |
 |----------|------------|-----------------|
-| 1        | Open Apache NetBeans IDE | Open Apache NetBeans IDE 16. If not installed, download it from [here](https://netbeans.apache.org/download/nb17/index.html). |
-| 1A       | Allow installation (macOS) | For macOS setup, allow installation by going to System Settings > Privacy & Security > Security > Click on "Allow applications downloaded from the App Store and identified developers." |
-| 2        | Open project | After opening NetBeans, open the project through NetBeans: File > Open project > Left-click on the project. |
-| 3        | Locate project file | Locate the project file ‘a2’ and click ‘Open Project.’ |
-| 4        | Run the project | Right-click on ‘a2’ > Run > Output. The project is now running. |
+| 1        | 🚀 Open up Apache NetBeans IDE 16 or 17 | Open Apache NetBeans IDE 16. If you have not downloaded the latest version of the IDE, please do so [here](https://netbeans.apache.org/download/nb17/index.html). |
+| 1A       | ☑️ Allow installation (macOS) | For macOS setup, allow installation by going to System Settings > Privacy & Security > Security > Click on the option ”Allow applications downloaded from the App Store and identified developers.” |
+| 2        | 📂 Open project | After opening NetBeans, open the project through NetBeans: File > Open project > Left-click on the project. |
+| 3        | 🧭 Locate project file | After you click on it, locate the project file ‘a2’ and click ‘Open Project’. |
+| 4        | ▶️ Run the project | Finally, right-click on ‘a2’ > Run > Output. Congratulations! The project is running now! |
 
 **Generating Javadocs:**
 
-1. Go to the top tabs and left-click on the run tab > ‘Generate Javadocs’. Output/Console will indicate ‘Build successful,’ and an HTML explorer will pop out with the Java documentation.
+1. Go to the top tabs and left-click on the run tab > ‘Generate Javadocs’.
+   - Output/Console will indicate ‘Build successful,’ and an HTML explorer will pop out to bring you to the Java documentation.
 
 **Access generated Javadocs from directory:**
 
 | **Step** | **Action** |
 |----------|------------|
-| 1        | Right-click on ‘Files’ tab | Right-click on the ‘Files’ tab in the project finder window in NetBeans. Locate ‘a2’ (Project name). |
-| 2        | Expand project directories | Right-click on the arrow down on ‘dist’ to expand, then right-click on ‘javadoc’ to expand further. |
-| 3        | Access index.html | Find ‘index.html,’ left-click on it, and right-click ‘View’. Your Javadocs will appear in an HTML browser. |
+| 1        | 📂 Right-click on the ‘Files’ tab | Right-click on the ‘Files’ tab in the project finder window on NetBeans. Locate ‘a2’ (Project name). |
+| 2        | 📂 Right-click on arrow down on ‘dist’ to expand and right-click on ‘javadoc’ to expand. |
+| 3        | 🕵️‍♂️ Find ‘index.html,’ left-click on it and right-click ‘View’. |
+| 4        | 📖 Finally! Your javadocs will appear in an HTML browser |
 
----
+## Structure
 
-## Program Uses
+The project has a standard MVC structure with three main packages: controller, model, and view. Additionally, there's a module-info.java file, which contains the module information.
 
-The Magazine Subscription Management Program is designed to streamline the management of a magazine subscription system. It offers several key functionalities to enhance user experience and simplify magazine subscription management:
+### Classes and Packages
 
-1. **Create and Customize Magazines:** Users can create new magazines, specifying the main part cost and selecting supplements to be included. This customization allows for tailored magazine offerings.
+**model Package**
+- AssociateCustomer: This class represents an associate customer within the system.
+- Customer: Base class representing a customer, with common attributes and methods for managing customers.
+- Supplement: This class deals with supplements, possibly including information like name, cost, etc.
+- Address: This class encapsulates the address details for customers or other entities.
+- PayingCustomer: This class represents a customer who pays for services or products, extending the functionality of the Customer class.
+- Magazine: This class handles magazine-related information, such as name, catalog, description, and supplements.
 
-2. **Add Paying and Associate Customers:** Paying customers can be added with their essential details, including name, email, and payment information. Additionally, associate customers can be associated with paying customers, simplifying the tracking of customer relationships.
+**view Package**
+- CreateMode: This file likely contains code related to the creation mode of the application, possibly handling the user interface for creating new objects or entities.
+- EditMode: This file probably contains code related to the editing mode of the application, possibly handling the user interface for editing existing objects or entities.
 
-3. **Manage Customers and Subscriptions:** The program allows for the creation of multiple customers and the addition of associate customers. Customers can be added to the magazine, and the system confirms successful customer removal from the magazine.
+**controller Package**
+- MagazineClient: The MagazineClient class acts as the main controller for managing customers, magazines, supplements, and interactions within the application. It includes functionalities for adding, deleting, and displaying details of customers, magazines, and supplements.
+- EditControl: The EditControl class manages the relationships between magazines, customers, and supplements, handling the copying and synchronization of data related to these entities. It facilitates the display of various messages to customers based on subscriptions and interactions with magazines and supplements.
 
-4. **Email Notifications:** The program is capable of generating weekly emails for each customer. These emails include a list of supplements of interest but exclude payment or invoicing details. Payment invoices are generated separately and only for paying customers.
-
-5. **Enhanced User Experience:** By automating customer interactions and magazine management, the program aims to enhance the user experience, reducing manual administrative tasks.
-
-6. **Detailed Documentation:** The program provides JavaDocs, allowing users to access detailed documentation for code reference and understanding.
-
-The Magazine Subscription Management Program simplifies the entire process of magazine subscription management, from magazine creation to customer management, email notifications, and documentation access. It is a valuable tool for businesses and individuals looking to efficiently manage magazine subscriptions while providing customization options for their customers.
+**template Package**
+- There is a CustomerTemplate and SupplementTemplate abstract class that is used by the model classes. It provides flexibility in implementation and code reusability.
