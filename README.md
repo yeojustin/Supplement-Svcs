@@ -17,6 +17,32 @@ The program is designed to manage customers, magazines, and supplements. It incl
 - Manage supplements and their associations with magazines
 - Handle different types of customers like paying and associate customers
 
+## Structure
+
+The project has a standard MVC structure with three main packages: controller, model, and view. Additionally, there's a module-info.java file, which contains the module information.
+
+### Classes and Packages
+
+**model Package**
+- AssociateCustomer: This class represents an associate customer within the system.
+- Customer: Base class representing a customer, with common attributes and methods for managing customers.
+- Supplement: This class deals with supplements, possibly including information like name, cost, etc.
+- Address: This class encapsulates the address details for customers or other entities.
+- PayingCustomer: This class represents a customer who pays for services or products, extending the functionality of the Customer class.
+- Magazine: This class handles magazine-related information, such as name, catalog, description, and supplements.
+
+**view Package**
+- CreateMode: This file likely contains code related to the creation mode of the application, possibly handling the user interface for creating new objects or entities.
+- EditMode: This file probably contains code related to the editing mode of the application, possibly handling the user interface for editing existing objects or entities.
+
+**controller Package**
+- MagazineClient: The MagazineClient class acts as the main controller for managing customers, magazines, supplements, and interactions within the application. It includes functionalities for adding, deleting, and displaying details of customers, magazines, and supplements.
+- EditControl: The EditControl class manages the relationships between magazines, customers, and supplements, handling the copying and synchronization of data related to these entities. It facilitates the display of various messages to customers based on subscriptions and interactions with magazines and supplements.
+
+**template Package**
+- There is a CustomerTemplate and SupplementTemplate abstract class that is used by the model classes. It provides flexibility in implementation and code reusability.
+
+
 ## Requirements and Specification
 
 ### Overview
@@ -73,28 +99,3 @@ The MagazineClient class serves as the main controller, integrating and interact
 | 2        | 📂 Right-click on arrow down on ‘dist’ to expand and right-click on ‘javadoc’ to expand. |
 | 3        | 🕵️‍♂️ Find ‘index.html,’ left-click on it and right-click ‘View’. |
 | 4        | 📖 Finally! Your javadocs will appear in an HTML browser |
-
-## Structure
-
-The project has a standard MVC structure with three main packages: controller, model, and view. Additionally, there's a module-info.java file, which contains the module information.
-
-### Classes and Packages
-
-**model Package**
-- AssociateCustomer: This class represents an associate customer within the system.
-- Customer: Base class representing a customer, with common attributes and methods for managing customers.
-- Supplement: This class deals with supplements, possibly including information like name, cost, etc.
-- Address: This class encapsulates the address details for customers or other entities.
-- PayingCustomer: This class represents a customer who pays for services or products, extending the functionality of the Customer class.
-- Magazine: This class handles magazine-related information, such as name, catalog, description, and supplements.
-
-**view Package**
-- CreateMode: This file likely contains code related to the creation mode of the application, possibly handling the user interface for creating new objects or entities.
-- EditMode: This file probably contains code related to the editing mode of the application, possibly handling the user interface for editing existing objects or entities.
-
-**controller Package**
-- MagazineClient: The MagazineClient class acts as the main controller for managing customers, magazines, supplements, and interactions within the application. It includes functionalities for adding, deleting, and displaying details of customers, magazines, and supplements.
-- EditControl: The EditControl class manages the relationships between magazines, customers, and supplements, handling the copying and synchronization of data related to these entities. It facilitates the display of various messages to customers based on subscriptions and interactions with magazines and supplements.
-
-**template Package**
-- There is a CustomerTemplate and SupplementTemplate abstract class that is used by the model classes. It provides flexibility in implementation and code reusability.
